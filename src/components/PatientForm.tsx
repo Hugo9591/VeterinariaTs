@@ -46,11 +46,11 @@ export default function PatientForm() {
   
           <p className="text-lg mt-5 text-center mb-10">
               Añade Pacientes y {''}
-              <span className="text-indigo-600 font-bold">Administralos</span>
+              <span className="text-gray-500 font-bold">Administralos</span>
           </p>
 
           <form 
-              className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+              className="bg-gray-100 shadow-xl rounded-lg py-10 px-5 mb-10"
               noValidate
               onSubmit={handleSubmit(registerPatient)}
           >
@@ -154,7 +154,7 @@ export default function PatientForm() {
   
               <input
                   type="submit"
-                  className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+                  className="bg-gray-500 w-full p-3 text-white uppercase font-bold hover:bg-gray-700 cursor-pointer transition-colors rounded-lg"
                   value='Guardar Paciente'
               />
           </form> 

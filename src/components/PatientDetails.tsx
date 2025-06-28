@@ -21,8 +21,7 @@ export default function PatientDetails({patient} : PatientDetailsProps) {
         
     return (
         // mostrar datos del paciente
-        <div className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl">
-            <PatientDetailItem label="ID" data={patient.id} />
+        <div className="mx-5 my-10 px-5 py-10 bg-gray-100 shadow-xl rounded-xl">
             <PatientDetailItem label="Nombre" data={patient.name} />
             <PatientDetailItem label="Propietario" data={patient.caretaker} />
             <PatientDetailItem label="Email" data={patient.email} />
@@ -32,7 +31,7 @@ export default function PatientDetails({patient} : PatientDetailsProps) {
             <div className="flex flex-col lg:flex-row gap-3 justify-between mt-10">
                 <button
                     type="button"
-                    className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg"
+                    className="py-2 px-10 bg-gray-500 hover:bg-gray-700 text-white font-bold uppercase rounded-lg"
                     onClick={() => getPatientById(patient.id)}>Editar
                 </button>
 
