@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# Administrar Veterinaria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Una página web para registrar mascotas en una clínica veterinaria. Este proyecto ya se ha hecho muchas veces pero con diferenes tecnologias, ahora se realizo usuando React, TypeScript, Tailwind, Zustand, React hook Form. Los usuarios ingresan datos como el nombre del paciente, propietario, email, fecha de alta, y síntomas. 
+Toda la información es validada con react hook form.  
+Los datos pueden editarse fácilmente o eliminarsea. Se usa persist para toda la información se guarde en el Local Storage para persistencia. 
 
-Currently, two official plugins are available:
+## Características
+- Formulario de registro: Los usuarios completan los siguientes campos:
+  - Nombre del paciente.
+  - Nombre del propietario.
+  - Email.
+  - Fecha de alta.
+  - Síntomas.
+- Validación de datos: La validacion de campos se hace con react hook form.
+- Visualización de registros:
+  - Los datos registrados se muestran en tarjetas.
+- Edición de registros:
+  - Al presionar el boton editar, los datos se rellenan automáticamente en el formulario.
+  - Los cambios se guardan y se actualiza la tarjeta correspondiente.
+- Eliminación de registros:
+  - Al presionar el boton de eliminar, el registro se elimina.
+- Persistencia: Todos los datos se almacenan en el Local Storage para mantenerlos después de recargar la página.
+  
+## Tecnologías utilizadas
+- React
+- TypeScript: Toda la lógica está implementada mediante clases.
+- Tailwind CSS: Los estilos principales están definidos en un archivo output.css.
+  
+## Uso
+1. Abre la página web en tu navegador.
+2. Completa todos los campos del formulario de registro y haz clic en el botón Registrar Paciente.
+  - Los datos se mostrarán en una tarjeta del lado derecho.
+3. Opciones disponibles en las tarjetas:
+  - Editar: Haz clic en el boton de editar para modificar los datos del paciente. Los datos se rellenarán automáticamente en el formulario.
+  - Eliminar: Haz clic en el boton de eliminar para eliminar el registro. 
+4. Los datos se guardarán automáticamente en el Local Storage y estarán disponibles al recargar la página.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Instalación
+1. Clona este repositorio:
+git clone https://github.com/Hugo9591/VeterinariaTs.git
+2. cd a la carpeta
+3. npm install.
+4. abrir navegador http://localhost:5173
